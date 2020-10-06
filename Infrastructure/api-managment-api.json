@@ -4,6 +4,9 @@
   "parameters": {
     "serviceName": {
       "type": "string"
+    },
+    "authorizationServer": {
+      "type": "string"
     }
   },
   "variables": {},
@@ -22,7 +25,11 @@
         "protocols": [
           "https"
         ],
-        "authenticationSettings": null,
+        "authenticationSettings": {
+          "oAuth2": {
+            "authorizationServerId": "[parameters('authorizationServer')]"
+          }
+        },
         "subscriptionKeyParameterNames": null
       }
     },
@@ -73,4 +80,3 @@
     }
   ]
 }
-

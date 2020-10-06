@@ -123,7 +123,8 @@
               "authorizationCode"
           ],
           "clientId": "[parameters('AADClientId')]",
-          "clientSecret" : "[parameters('AADClientSecret')]"
+          "clientSecret" : "[parameters('AADClientSecret')]",
+          "bearerTokenSendingMethods" : [ "authorizationHeader" ]
       }
     }
   ]
